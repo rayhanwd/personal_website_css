@@ -13,13 +13,26 @@
     <header id="header">
         <div class="container">
             <nav>
+               <div class="mobile_nav">
                 <div class="logo">
                     <h4>Rayhan</h4>
                 </div>
+                <div class="toggle_btn_1">
+                    <img src="./assets/img/navigation-menu.svg" alt="" srcset="">
+                </div>
+                <div class="toggle_btn_2">
+                    <img src="./assets/img/close.svg" alt="" srcset="">
+                </div>
+               </div>
                 <div class="nav">
-                    <ul>
+                    <ul class="nav_item">
                         <li> <a href="">Home</a></li>
                         <li> <a href="">About</a></li>
+                        <li> <a href="">Contact</a></li>
+                        <li> <a href="">Contact</a></li>
+                        <li> <a href="">Contact</a></li>
+                        <li> <a href="">Contact</a></li>
+                        <li> <a href="">Contact</a></li>
                         <li> <a href="">Contact</a></li>
                         <li> <a href="">Service</a></li>
                         <li> <a href="">Blog</a></li>
@@ -60,7 +73,7 @@
             </div>
         </section>
         <!-- my skill -->
-        <section id="my-skill">
+        <section id="skill">
             <div class="container">
                 <div class="wrapper">
                     <div class="skill__title">
@@ -69,23 +82,23 @@
                     <div class="skill__content">
                         <div class="bar_1">
                             <h4>Design</h4>
-                            <div class="bar_color"></div>
+                            <div class="bar_color_1"></div>
                         </div>
                         <div class="bar_1">
                             <h4>Html5</h4>
-                            <div class="bar_color"></div>
+                            <div class="bar_color_2"></div>
                         </div>
                         <div class="bar_1">
                             <h4>Css</h4>
-                            <div class="bar_color"></div>
+                            <div class="bar_color_3"></div>
                         </div>
                         <div class="bar_1">
                             <h4>Bootstrap5</h4>
-                            <div class="bar_color"></div>
+                            <div class="bar_color_4"></div>
                         </div>
                         <div class="bar_1">
                             <h4>Javascript</h4>
-                            <div class="bar_color"></div>
+                            <div class="bar_color_5"></div>
                         </div>
                     </div>
                 </div>
@@ -93,8 +106,23 @@
         </section>
     </main>
     <footer>
-
+        <h5>Footer</h5>
     </footer>
+    <script>
+        const btn1 = document.querySelector('.toggle_btn_1');
+        const btn2 = document.querySelector('.toggle_btn_2');
+        const nav = document.querySelector('.nav_item');
+        btn1.onclick = () =>{
+            nav.classList.remove('nav_item');
+            btn2.style.display = 'block';
+            btn1.style.display = 'none';
+        }
+        btn2.onclick = () =>{
+            nav.classList.add('nav_item');
+            btn2.style.display = 'none';
+            btn1.style.display = 'block';
+        }
+    </script>
 </body>
 
 </html>
